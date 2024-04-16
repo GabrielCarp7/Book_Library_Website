@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Rating</title>
+    {{ bootstrap.load_css() }}
+    {% from 'bootstrap5/form.html' import render_form %}
+</head>
+<body class="bg-dark mt-5">
+    <div class="bg-secondary text-secondary px-4 py-5 text-center border border-secondary rounded-5">
+    <div class="py-5">
+      <h1 class="display-5 fw-bold text-white">Book Name: {{ data.title }}</h1>
+      <h2 class="display-5 fw-bold text-white">Current Rating: {{ data.rating }}</h2>
+    </div>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center text-light">
+        {{ render_form(form) }}
+    </div>
+  </div>
+</body>
+</html>

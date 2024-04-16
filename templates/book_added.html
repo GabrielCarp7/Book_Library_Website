@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Added</title>
+    {{ bootstrap.load_css() }}
+</head>
+<body class="bg-dark mt-5">
+    <div class="bg-secondary text-secondary px-4 py-5 text-center border border-secondary rounded-5">
+    <div class="py-5">
+      <h1 class="display-5 fw-bold text-white">Book Added to the List</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="fs-5 mb-4 text-white">Want to add another book?</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <a type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold" href="{{ url_for('add') }}">Add Another Book</a>
+          <a type="button" class="btn btn-outline-light btn-lg px-4" href="{{ url_for('home') }}">Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
