@@ -6,17 +6,15 @@ from wtforms.validators import DataRequired
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 from sqlalchemy import Integer, String, Float
+import os
+from dotenv import find_dotenv, load_dotenv
 
-"""
-
-IMPORTANT LINKS:
-
-    https://www.geeksforgeeks.org/connect-flask-to-a-database-with-flask-sqlalchemy/  >> Creating Database
-
-"""
+dotenv_path = find_dotenv()
+load_dotenv(dotenv_path)
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = SECRET_KEY
 Bootstrap5(app)
 
 
@@ -35,10 +33,6 @@ class Book(db.Model):
     title: Mapped[str] = mapped_column(nullable=False, unique=True)
     author: Mapped[str] = mapped_column(nullable=False, unique=False)
     rating: Mapped[float] = mapped_column(nullable=False)
-
-
-# with app.app_context():
-#     db.create_all()
 
 
 class BookForm(FlaskForm):
