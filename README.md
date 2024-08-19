@@ -31,8 +31,8 @@ A web application built with Flask and SQLAlchemy that allows users to track all
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/book-tracker.git
-    cd book-tracker
+    git clone https://github.com/GabrielCarp7/Book_Library_Website.git
+    cd Book_Library_Website
     ```
 
 2. **Create a virtual environment and activate it:**
